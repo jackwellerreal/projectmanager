@@ -12,8 +12,22 @@ const files = fs.readdirSync(projectsDir);
 
 if (files.includes(dirName)) {
     console.log('\n\033[31mProject already exists\033[0m\n');
+    console.log('Closing in 1 minute');
+    setTimeout(() => {
+        console.log('Closing');
+    }, 60000);
 } else if(dirName === '') {
     console.log('\n\033[31mPlease enter a project name\033[0m\n');
+    console.log('Closing in 1 minute');
+    setTimeout(() => {
+        console.log('Closing');
+    }, 60000);
+} else if(dirName.includes(' ')) {
+    console.log('\n\033[31mProject name cannot contain spaces\033[0m\n');
+    console.log('Closing in 1 minute');
+    setTimeout(() => {
+        console.log('Closing');
+    }, 60000);
 } else {
     makeDir(dirName, projectType)
 }
@@ -24,7 +38,7 @@ function makeDir(name, type) {
             console.log(err);
         } else {
             if(type === 'js') {
-                fs.copy('./templates/js', `${projectsDir}\\${name}`, function (err) {
+                fs.copy(`${__dirname}/templates/js`, `${projectsDir}\\${name}`, function (err) {
                     if (err) {
                       console.error(err);
                     } else {
@@ -32,7 +46,7 @@ function makeDir(name, type) {
                     }
                 });
             } else if(type === 'py') {
-                fs.copy('./templates/py', `${projectsDir}\\${name}`, function (err) {
+                fs.copy(`${__dirname}/templates/py`, `${projectsDir}\\${name}`, function (err) {
                     if (err) {
                       console.error(err);
                     } else {
@@ -40,7 +54,7 @@ function makeDir(name, type) {
                     }
                 });
             } else if(type === 'html') {
-                fs.copy('./templates/html', `${projectsDir}\\${name}`, function (err) {
+                fs.copy(`${__dirname}/templates/html`, `${projectsDir}\\${name}`, function (err) {
                     if (err) {
                       console.error(err);
                     } else {
@@ -48,7 +62,7 @@ function makeDir(name, type) {
                     }
                 });
             } else if(type === 'express') {
-                fs.copy('./templates/express', `${projectsDir}\\${name}`, function (err) {
+                fs.copy(`${__dirname}/templates/express`, `${projectsDir}\\${name}`, function (err) {
                     if (err) {
                       console.error(err);
                     } else {
@@ -68,6 +82,10 @@ function openCode() {
             console.log(err);
         } else {
             console.log('Opening VSCode\n');
+            console.log('Closing in 1 minute');
+            setTimeout(() => {
+                console.log('Closing');
+            }, 60000);
         }
     })
 }
