@@ -1,0 +1,17 @@
+{
+  "name": "projectmanager",
+  "description": "Organize your projects",
+  "version": "1.0.0",
+  "homepage": "https://github.com/What-Question-Mark/projectmanager",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/What-Question-Mark/projectmanager/issues"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
