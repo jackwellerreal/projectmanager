@@ -40,33 +40,33 @@ function makeDir(name, type) {
             if(type === 'js') {
                 fs.copy(`${__dirname}/templates/js`, `${projectsDir}\\${name}`, function (err) {
                     if (err) {
-                      console.error(err);
+                        console.error(err);
                     } else {
-                      console.log("\nTemplate added!\n");
+                        console.log("\nTemplate added!\n");
                     }
                 });
             } else if(type === 'py') {
                 fs.copy(`${__dirname}/templates/py`, `${projectsDir}\\${name}`, function (err) {
                     if (err) {
-                      console.error(err);
+                        console.error(err);
                     } else {
-                      console.log("\nTemplate added!\n");
+                        console.log("\nTemplate added!\n");
                     }
                 });
             } else if(type === 'html') {
                 fs.copy(`${__dirname}/templates/html`, `${projectsDir}\\${name}`, function (err) {
                     if (err) {
-                      console.error(err);
+                        console.error(err);
                     } else {
-                      console.log("\nTemplate added!\n");
+                        console.log("\nTemplate added!\n");
                     }
                 });
             } else if(type === 'express') {
                 fs.copy(`${__dirname}/templates/express`, `${projectsDir}\\${name}`, function (err) {
                     if (err) {
-                      console.error(err);
+                        console.error(err);
                     } else {
-                      console.log("\nTemplate added!");
+                        console.log("\nTemplate added!");
                     }
                 });
             } else {}
