@@ -69,6 +69,22 @@ function makeDir(name, type) {
                         console.log("\nTemplate added!");
                     }
                 });
+            } else if(type === 'react') {
+                fs.copy(`${__dirname}/templates/react`, `${projectsDir}\\${name}`, function (err) {
+                    if (err) {
+                        console.error(err);
+                    } else {
+                        console.log("\nTemplate added!");
+                    }
+                });
+            } else if(type === 'electron') {
+                fs.copy(`${__dirname}/templates/electron`, `${projectsDir}\\${name}`, function (err) {
+                    if (err) {
+                        console.error(err);
+                    } else {
+                        console.log("\nTemplate added!");
+                    }
+                });
             } else {}
             console.log('\nDirectory created\n');
             openCode()
