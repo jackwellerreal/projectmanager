@@ -1,4 +1,4 @@
-const projectsDir = ''
+const projectsDir = 'D:\\Jack\\OneDrive\\Desktop\\projects'
 
 
 const fs = require('fs-extra')
