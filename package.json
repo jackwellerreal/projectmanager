@@ -2,10 +2,10 @@
   "name": "projectmanager",
   "description": "Organize your projects",
   "version": "1.0.0",
-  "homepage": "https://github.com/What-Question-Mark/projectmanager",
+  "homepage": "https://github.com/jackwellerreal/projectmanager",
   "main": "index.js",
   "bugs": {
-    "url": "https://github.com/What-Question-Mark/projectmanager/issues"
+    "url": "https://github.com/jackwellerreal/projectmanager/issues"
   },
   "scripts": {
     "start": "node index.js"
